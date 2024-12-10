@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <!-- Font Awesome CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Egyiptom</title>
+</head>
+
+<body>
+    <nav class="bg-gray-800">
+        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+            <div class="relative flex h-16 items-center justify-between">
+                <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                    <!-- Mobile menu button-->
+                    <button type="button"
+                        class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                        aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="absolute -inset-0.5"></span>
+                        <span class="sr-only">Open main menu</span>
+                        <!--
+                  Icon when menu is closed.
+      
+                  Menu open: "hidden", Menu closed: "block"
+                -->
+                        <svg class="block size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" aria-hidden="true" data-slot="icon">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                        <!--
+                  Icon when menu is open.
+      
+                  Menu open: "block", Menu closed: "hidden"
+                -->
+                        <svg class="hidden size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" aria-hidden="true" data-slot="icon">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                    <div class="flex shrink-0 items-center">
+                        <img class="h-8 w-auto" src="img/ankh.webp" alt="Your Company">
+                    </div>
+                    <div class="hidden sm:ml-6 sm:block">
+                        <div class="flex space-x-4">
+                            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                            <a href="#" class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white"
+                                aria-current="page">Home</a>
+                            <a href="#"
+                                class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Monuments</a>
+                            <a href="#"
+                                class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Contact</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                    <button type="button"
+                        class="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+                        <span class="absolute -inset-1.5"></span>
+                        <span class="sr-only">View notifications</span>
+                        <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                            aria-hidden="true" data-slot="icon">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" />
+                        </svg>
+                    </button>
+
+                    <!-- Profile dropdown -->
+                    <div class="relative ml-3">
+                        <div>
+                            <button type="button"
+                                class="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                                id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                                <span class="absolute -inset-1.5"></span>
+                                <span class="sr-only">Open user menu</span>
+                                <img class="size-8 rounded-full" src="img/logo.webp" alt="">
+                            </button>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu, show/hide based on menu state. -->
+        <div class="sm:hidden" id="mobile-menu">
+            <div class="space-y-1 px-2 pb-3 pt-2">
+                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                <a href="#" class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white"
+                    aria-current="page">Home</a>
+                <a href="#"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Monument</a>
+                <a href="#"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!--carousel, amit a tailwind osztályaival építünk fel, mivel a tailwindnek nincs saját carouselje-->
+    <!-- A carousel konténer, amely tartalmazza a képeket és az irányító gombokat 
+Carousel konténer (<div class="relative w-full h-64 overflow-hidden">):
+relative:A konténer relatív pozíciót kap, hogy az abszolútan pozícionált elemek (pl. gombok) ezen belül helyezkedjenek el.
+w-full:A konténer teljes szélességet foglal el a szülő elemén belül.
+h-64:A magasság 64 Tailwind CSS egység (256 pixel).
+overflow-hidden:Az elemen kívül eső tartalom (pl. más slide-ok) rejtve marad, így csak az aktuális slide látható. 
+      -->
+    <div class="relative w-full h-64 overflow-hidden">
+        <!-- A carousel belső tartalma: képek sorozata, amely mozgatható 
+         carousel:Ez az elem tartalmazza az összes slide-ot. A flex használatával minden slide egymás mellé kerül.
+flex:A gyermek elemek (slide-ok) egy sorba rendeződnek.
+transition-transform:Az animáció gördülékeny átmenetet biztosít a transform tulajdonság változtatásakor.
+duration-700:Az átmenet időtartama 700ms (0.7 másodperc).
+ease-in-out:Az animáció sebessége az elején és a végén lassabb, középen gyorsabb.
+style="transform: translateX(-0%);: A CSS transform tulajdonság kezdetben 0% eltolást alkalmaz, így az első slide látható.
+        -->
+        <div class="carousel flex transition-transform duration-700 ease-in-out" style="transform: translateX(-0%);">
+            <!-- Első slide konténer 
+             w-full:Minden slide a konténer teljes szélességét elfoglalja.
+            flex-shrink-0:Megakadályozza, hogy a slide mérete csökkenjen, így minden slide ugyanakkora marad.
+            <img>:A képek Tailwind osztályokat kapnak:
+            w-full: A kép teljes szélességét kitölti.
+            h-64: A kép magasságát 64 egységre korlátozza.
+            object-cover: A kép kitölti a megadott területet, miközben megtartja az arányait.  -->
+            <div class="w-full flex-shrink-0">
+                <!-- Slide-hoz tartozó kép -->
+                <img src="img/header01.webp" class="w-full h-64 object-cover" alt="Slide 1">
+            </div>
+            <!-- Második slide konténer -->
+            <div class="w-full flex-shrink-0">
+                <img src="img/header02.webp" class="w-full h-64 object-cover" alt="Slide 2">
+            </div>
+            <!-- Harmadik slide konténer -->
+            <div class="w-full flex-shrink-0">
+                <img src="img/header03.webp" class="w-full h-64 object-cover" alt="Slide 3">
+            </div>
+        </div>
+
+        <!-- Előző slide gomb -->
+        <button id="prev" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-2 py-1">
+            Prev
+        </button>
+        <!-- Következő slide gomb -->
+        <button id="next" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-2 py-1">
+            Next
+        </button>
+    </div>
+<!--fő címsor
+Szekció háttér és stílusok:
+bg-gradient-to-r: Háttér színátmenet (balról jobbra).
+from-yellow-500 via-orange-500 to-red-500: Színek a sárgától a vörösig, az átmenet közepén narancssárgával.
+text-white: Fehér szöveg.
+py-16: Felső és alsó padding (4rem).
+px-8: Oldalsó padding (2rem).
+text-center: Szöveg középre igazítása.
+Cím: text-4xl md:text-5xl: Nagy betűméret, közepes képernyőkön még nagyobb.
+font-bold: Félkövér szöveg.
+mb-4: Alsó margó a cím és a leírás között.
+Leírás: text-lg md:text-xl: Közepes betűméret kisebb képernyőkön, nagyobb betűméret nagyobb képernyőkön.
+max-w-3xl: A szöveg maximális szélessége, hogy ne legyen túl széles.
+mx-auto: Középre igazítás vízszintesen.
+-->
+<div class="bg-gradient-to-r from-yellow-500 via-orange-500 to-red-500 text-white py-16 px-8 text-center">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4">Fedezd fel Egyiptom csodáit!</h1>
+    <p class="text-lg md:text-xl max-w-3xl mx-auto">
+      Egyiptom az ókori világ egyik leglenyűgözőbb civilizációja, amely híres a piramisairól, templomairól és gazdag történelméről. 
+      Légy részese a történelemnek, és fedezd fel ezt a csodálatos országot!
+    </p>
+  </div>
+  
+    <!-- kártyák-->
+    <div class="container mx-auto p-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <!-- Kártya 1 -->
+          <div class="bg-white shadow-md rounded-lg p-4">
+            <img src="img/001.webp" alt="Kép 1" class="w-full h-48 object-cover rounded-md mb-4">
+            <h3 class="text-xl font-bold mb-2">Szakkara</h3>
+            <p class="text-gray-600">Szakkara híres a Dzsószer-piramisról, amely az első lépcsős piramis Egyiptomban.</p>
+          </div>
+          <!-- Kártya 2 -->
+          <div class="bg-white shadow-md rounded-lg p-4">
+            <img src="img/002.webp" alt="Kép 2" class="w-full h-48 object-cover rounded-md mb-4">
+            <h3 class="text-xl font-bold mb-2">Gíza</h3>
+            <p class="text-gray-600">A gízai piramisok, köztük a Nagy Piramis, az ókori világ egyik csodája.</p>
+          </div>
+          <!-- Kártya 3 -->
+          <div class="bg-white shadow-md rounded-lg p-4">
+            <img src="img/003.webp" alt="Kép 3" class="w-full h-48 object-cover rounded-md mb-4">
+            <h3 class="text-xl font-bold mb-2">Karnak templom</h3>
+            <p class="text-gray-600">A Karnak templomkomplexum hatalmas vallási központ, amely Amon-Ré istennek szentelt.</p>
+          </div>
+          <!-- Kártya 4 -->
+          <div class="bg-white shadow-md rounded-lg p-4">
+            <img src="img/004.webp" alt="Kép 4" class="w-full h-48 object-cover rounded-md mb-4">
+            <h3 class="text-xl font-bold mb-2">Királyok völgye</h3>
+            <p class="text-gray-600">A Királyok völgye a fáraók sírhelye, köztük Tutenkhamon híres sírja.</p>
+          </div>
+          <!-- Kártya 5 -->
+          <div class="bg-white shadow-md rounded-lg p-4">
+            <img src="img/005.webp" alt="Kép 5" class="w-full h-48 object-cover rounded-md mb-4">
+            <h3 class="text-xl font-bold mb-2">Memnon kolosszusok</h3>
+            <p class="text-gray-600">A Memnon kolosszusok két hatalmas szobor, amelyek III. Amenhotep templomát őrizték.</p>
+          </div>
+          <!-- Kártya 6 -->
+          <div class="bg-white shadow-md rounded-lg p-4">
+            <img src="img/006.webp" alt="Kép 6" class="w-full h-48 object-cover rounded-md mb-4">
+            <h3 class="text-xl font-bold mb-2">Tutenkhamon sírja</h3>
+            <p class="text-gray-600">Tutenkhamon sírja a leghíresebb a Királyok völgyében, gazdag leletekkel tele.</p>
+          </div>
+          <!-- Kártya 7 -->
+          <div class="bg-white shadow-md rounded-lg p-4">
+            <img src="img/007.webp" alt="Kép 7" class="w-full h-48 object-cover rounded-md mb-4">
+            <h3 class="text-xl font-bold mb-2">Edfu</h3>
+            <p class="text-gray-600">Edfu temploma Hórusz istennek szentelt, Egyiptom egyik legjobban megőrzött temploma.</p>
+          </div>
+          <!-- Kártya 8 -->
+          <div class="bg-white shadow-md rounded-lg p-4">
+            <img src="img/008.webp" alt="Kép 8" class="w-full h-48 object-cover rounded-md mb-4">
+            <h3 class="text-xl font-bold mb-2">Hatsepszut temploma</h3>
+            <p class="text-gray-600">Hatsepszut temploma egyedülálló teraszos kialakításáról híres Deir el-Bahariban.</p>
+          </div>
+        </div>
+      </div>
+      
+<!--lábléc-->
+
+<footer class="bg-black text-white py-8">
+    <div class="container mx-auto text-center">
+      <h3 class="text-lg font-bold mb-4">Kövess minket!</h3>
+      <div class="flex justify-center space-x-6">
+        <!-- Facebook ikon -->
+        <a href="https://facebook.com" target="_blank" class="text-gray-400 hover:text-white text-2xl">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <!-- Twitter ikon -->
+        <a href="https://twitter.com" target="_blank" class="text-gray-400 hover:text-white text-2xl">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <!-- Instagram ikon -->
+        <a href="https://instagram.com" target="_blank" class="text-gray-400 hover:text-white text-2xl">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+      <p class="text-sm text-gray-500 mt-4">&copy; 2024 Egyiptomi Csodák. Minden jog fenntartva.</p>
+    </div>
+  </footer>
+  
+  
+  
+
+    <script>
+        // Kiválasztjuk a `.carousel` elemet, amely az összes slide konténere
+        const carousel = document.querySelector('.carousel');
+
+        // Az összes slide (gyermek div-ek a `.carousel` alatt) lekérése NodeList formájában
+        const slides = document.querySelectorAll('.carousel > div');
+
+        // A kezdeti slide index beállítása (az első slide az alapértelmezett)
+        let currentIndex = 0;
+
+        // Hozzárendeljük a "prev" gomb eseménykezelőjét
+        document.getElementById('prev').addEventListener('click', () => {
+            // Az aktuális index csökkentése eggyel, a modulo operátorral (körkörösség biztosítása)
+            // Ha az index eléri a 0-t, visszaáll az utolsó slide-ra
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+
+            // A carousel pozíciójának frissítése a transform CSS tulajdonsággal
+            // Az index alapján számítjuk ki, mennyit kell eltolni balra
+            carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+        });
+
+        // Hozzárendeljük a "next" gomb eseménykezelőjét
+        document.getElementById('next').addEventListener('click', () => {
+            // Az aktuális index növelése eggyel, a modulo operátorral (körkörösség biztosítása)
+            // Ha az index eléri az utolsó slide-ot, visszaáll az első slide-ra
+            currentIndex = (currentIndex + 1) % slides.length;
+
+            // A carousel pozíciójának frissítése a transform CSS tulajdonsággal
+            // Az index alapján számítjuk ki, mennyit kell eltolni balra
+            carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+        });
+
+    </script>
+
+</body>
+
+</html>
